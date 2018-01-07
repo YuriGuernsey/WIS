@@ -1,0 +1,71 @@
+
+
+body{
+  background-color: #3B3A3A;
+  color: #FEFEFE;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 100%;
+  text-align: center;
+}
+
+#snowflakeContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.snowflake {
+    padding-left: 15px;
+    font-family: Cambria, Georgia, serif;
+    font-size: 14px;
+    line-height: 24px;
+    position: fixed;
+    color: #FFFFFF;
+    user-select: none;
+    z-index: 1000;
+}
+.snowflake:hover {
+    cursor: default;
+}
+
+.container{
+  margin: 0 auto;
+  width: 50%;
+}
+
+.Header{
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 650%;
+}
+
+.Labels{
+  font-size:100%;
+  margin-top: 10%;
+}
+
+form{
+  margin: 0 auto;
+  width: 60%;
+}
+
+select{
+  margin: 0 auto;
+  display: block;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 100%;
+  text-align-last: center;
+}
+
+button{
+  margin: 0 auto;
+  display: block;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 200%;
+  border-radius: 10px;
+}
+
+.display{
+  margin: 0 auto;
+  width: 35%;
+  font-size:550%;
+  font-family: 'Sedgwick Ave Display', cursive;
+}

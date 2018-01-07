@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Will it snow?</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <meta http-equiv="content-type" content="text/php; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Sedgwick+Ave+Display" rel="stylesheet">
+
+</head>
+<body>
+  <div id="snowflakeContainer">
+    <p class="snowflake">*</p>
+</div>
+  <div class="container">
+
+
+  <div class="Header">
+    WILL IT SNOW?  </div>
+  <form>
+    <div id="display" class="display">
+    </div>
+  <div class="Labels">
+
+  Select your Location:</div>
+
+  <select id="mySelect" class="selection">
+    <!-- Countries starting with A -->
+    <optgroup label="A">
+      <!-- Afghanistan -->
+      <option value="Afghanistan">Afghanistan</option>
+      <!-- Albania -->
+      <option value="Albania">Albania</option>
+      <!-- Algeria -->
+      <option value="Algeria">Algeria</option>
+      <!-- Andorra -->
+      <option value="Andorra">Andorra</option>
+      <!-- Angola -->
+      <option value="Angola">Angola</option>
+      <!-- Antigua and Barbuda -->
+      <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+      <!-- Argentina -->
+      <option value="Argentina">Argentina</option>
+      <!-- Armenia -->
+      <option value="Armenia">Armenia</option>
+      <!-- Aruba -->
+      <option value="Aruba">Aruba</option>
+      <!-- Australia -->
+      <option value="Australia">Australia</option>
+      <!-- Austria -->
+      <option value="Austria">Austria</option>
+      <!-- Armenia -->
+      <option value="Armenia">Armenia</option>
+      <!-- Armenia -->
+      <option value="Azerbaijan">Azerbaijan</option>
+    </optgroup>
+    <!-- Countries starting with B -->
+    <optgroup label="B">
+      <!-- Bahamas -->
+      <option value="Bahamas">Bahamas</option>
+      <!-- Bahrain -->
+      <option value="Bahrain">Bahrain</option>
+      <!-- Bangladesh -->
+      <option value="Bangladesh">Bangladesh</option>
+      <!-- Barbados -->
+      <option value="Barbados">Barbados</option>
+      <!-- Belarus -->
+      <option value="Belarus">Belarus</option>
+      <!-- Belgium -->
+      <option value="Belgium">Belgium</option>
+      <!-- Belize -->
+      <option value="Belize">Belize</option>
+      <!-- Benin -->
+      <option value="Benin">Benin</option>
+      <!-- Bhutan -->
+      <option value="Bhutan">Bhutan</option>
+      <!-- Bolivia -->
+      <option value="Bolivia">Bolivia</option>
+      <!-- Bosnia and Herzegovina -->
+      <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+      <!-- Botswana -->
+      <option value="Botswana">Botswana</option>
+      <!-- Brazil -->
+      <option value="Brazil">Brazil</option>
+      <!-- Brunei -->
+      <option value="Brunei">Brunei</option>
+      <!-- Bulgaria -->
+      <option value="Bulgaria">Bulgaria</option>
+      <!-- Burkina Faso -->
+      <option value="Burkina Faso">Burkina Faso</option>
+      <!-- Burma -->
+      <option value="Burma">Burma</option>
+      <!-- Burundi -->
+      <option value="Burundi">Burundi</option>
+    </optgroup>
+    <!-- Countries starting with C -->
+    <optgroup label="C">
+      <!-- Cambodia -->
+      <option value="Cambodia">Cambodia</option>
+      <!-- Cameroon -->
+      <option value="Cameroon">Cameroon</option>
+      <!-- Canada -->
+      <option value="Canada">Canada</option>
+      <!-- Cabo Verde -->
+      <option value="Cabo Verde">Cabo Verde</option>
+      <!-- Central African Republic -->
+      <option value="Central African Republic">Central African Republic</option>
+      <!-- Chad -->
+      <option value="Chad">Chad</option>
+      <!-- Chile -->
+      <option value="Chile">Chile</option>
+      <!-- China -->
+      <option value="China">China</option>
+      <!-- Colombia -->
+      <option value="Colombia">Colombia</option>
+      <!-- Comoros -->
+      <option value="Comoros">Comoros</option>
+      <!-- Democratic Republic of the Congo -->
+      <option value="Democratic Republic of the Congo">(Democratic Republic of) The Congo</option>
+      <!-- Republic of the Congo -->
+      <option value=" Republic of the Congo">(Republic of) The Congo</option>
+      <!-- Costa Rica -->
+      <option value="Costa Rica">Costa Rica</option>
+      <!-- Cote d'Ivoire -->
+      <option value="Cote d'Ivoire">Cote d'Ivoire</option>
+      <!-- Croatia -->
+      <option value="Croatia">Croatia</option>
+      <!-- Cuba -->
+      <option value="Cuba">Cuba</option>
+      <!-- Curacao -->
+      <option value="Curacao">Curacao</option>
+      <!-- Cyprus -->
+      <option value="Cyprus">Cyprus</option>
+      <!-- Czechia -->
+      <option value="Czechia">Czechia</option>
+    </optgroup>
+    <!-- Countries starting with D -->
+    <optgroup label="D">
+      <!-- Denmark -->
+      <option value="Denmark">Denmark</option>
+      <!-- Djibouti -->
+      <option value="Djibouti">Djibouti</option>
+      <!-- Dominica -->
+      <option value="Dominica">Dominica</option>
+      <!-- Dominican Republic -->
+      <option value="Dominican Republic ">Dominican Republic </option>
+    </optgroup>
+    <!-- Countries starting with E -->
+    <optgroup label="E">
+      <!-- Timor-Leste -->
+      <option value="Timor-Leste">Timor-Leste</option>
+      <!-- Ecuador -->
+      <option value="Ecuador">Ecuador</option>
+      <!-- Egypt -->
+      <option value="Egypt">Egypt</option>
+      <!-- El Salvador -->
+      <option value="El Salvador">El Salvador</option>
+      <!-- Equatorial Guinea  -->
+      <option value="Equatorial Guinea">Equatorial Guinea</option>
+      <!-- Eritrea -->
+      <option value="Eritrea">Eritrea</option>
+      <!-- Estonia -->
+      <option value="Estonia">Estonia</option>
+      <!-- Ethiopia -->
+      <option value="Ethiopia">Ethiopia</option>
+    </optgroup>
+    <!-- Countries starting with F -->
+    <optgroup label="F">
+      <!-- Fiji -->
+      <option value="Fiji">Fiji</option>
+      <!-- Finland -->
+      <option value="Finland">Finland</option>
+      <!-- France -->
+      <option value="France">France</option>
+    </optgroup>
+    <!-- Countries starting with G -->
+    <optgroup label="G">
+      <!-- Gabon -->
+      <option value="Gabon">Gabon</option>
+      <!-- Gambia -->
+      <option value="Gambia">Gambia</option>
+      <!-- Georgia -->
+      <option value="Georgia">Georgia</option>
+      <!-- Germany -->
+      <option value="Germany">Germany</option>
+      <!-- Ghana -->
+      <option value="Ghana">Ghana</option>
+      <!-- Greece -->
+      <option value="Greece">Greece</option>
+      <!-- Grenada -->
+      <option value="Grenada">Grenada</option>
+      <!-- Guatemala -->
+      <option value="Guatemala">Guatemala</option>
+      <!-- Guinea -->
+      <option value="Guinea">Guinea</option>
+      <!-- Guinea-Bissau -->
+      <option value="Guinea-Bissau">Guinea-Bissau</option>
+      <!-- Guyana -->
+      <option value="Guyana">Guyana</option>
+    </optgroup>
+    <!-- Countries starting with H -->
+    <optgroup label="H">
+      <!-- Haiti -->
+      <option value="Haiti">Haiti</option>
+      <!-- Holy See -->
+      <option value="Holy See">Holy See</option>
+      <!-- Honduras -->
+      <option value="Honduras">Honduras</option>
+      <!-- Hong Kong -->
+      <option value="Hong Kong">Hong Kong</option>
+      <!-- Hungary -->
+      <option value="Hungary">Hungary</option>
+    </optgroup>
+    <!-- Countries starting with I -->
+    <optgroup label="I">
+      <!-- Iceland -->
+      <option value="Iceland">Iceland</option>
+      <!-- India -->
+      <option value="India">India</option>
+      <!-- Indonesia -->
+      <option value="Indonesia">Indonesia</option>
+      <!-- Iran -->
+      <option value="Iran">Iran</option>
+      <!-- Iraq -->
+      <option value="Iraq">Iraq</option>
+      <!-- Ireland -->
+      <option value="Ireland">Ireland</option>
+      <!-- Iraq -->
+      <option value="Israel">Israel</option>
+      <!-- Iraq -->
+      <option value="Italy">Italy</option>
+    </optgroup>
+    <!-- Countries starting with J -->
+    <optgroup label="J">
+      <!-- Jamaica -->
+      <option value="Jamaica">Jamaica</option>
+      <!-- Japan -->
+      <option value="Japan">Japan</option>
+      <!-- Jordan -->
+      <option value="Jordan">Jordan</option>
+    </optgroup>
+    <!-- Countries starting with K -->
+    <optgroup label="K">
+      <!-- Kazakhstan -->
+      <option value="Kazakhstan">Kazakhstan</option>
+      <!-- Kenya -->
+      <option value="Kenya">Kenya</option>
+      <!-- Kiribati -->
+      <option value="Kiribati">Kiribati</option>
+      <!-- North Korea -->
+      <option value="North Korea">Korea (North)</option>
+      <!-- South Korea -->
+      <option value="South Korea">Korea (South)</option>
+      <!-- Kosovo -->
+      <option value="Kosovo">Kosovo</option>
+      <!-- Kuwait -->
+      <option value="Kuwait">Kuwait</option>
+      <!-- Kyrgyzstan -->
+      <option value="Kyrgyzstan">Kyrgyzstan</option>
+    </optgroup>
+    <!-- Countries starting with L -->
+    <optgroup label="L">
+      <!-- Laos -->
+      <option value="Laos">Laos</option>
+      <!-- Latvia -->
+      <option value="Latvia">Latvia</option>
+      <!-- Lebanon -->
+      <option value="Lebanon">Lebanon</option>
+      <!-- Lesotho -->
+      <option value="Lesotho">Lesotho</option>
+      <!-- Liberia -->
+      <option value="Liberia">Liberia</option>
+      <!-- Libya -->
+      <option value="Libya">Libya</option>
+      <!-- Liechtenstein -->
+      <option value="Liechtenstein">Liechtenstein</option>
+      <!-- Lithuania -->
+      <option value="Lithuania">Lithuania</option>
+      <!-- Luxembourg -->
+      <option value="Luxembourg">Luxembourg</option>
+    </optgroup>
+    <!-- Countries starting with M -->
+    <optgroup label="M">
+      <!-- Macau -->
+      <option value="Macau">Macau</option>
+      <!-- Macedonia -->
+      <option value="Macedonia">Macedonia</option>
+      <!-- Madagascar -->
+      <option value="Madagascar">Madagascar</option>
+      <!-- Malawi -->
+      <option value="Malawi">Malawi</option>
+      <!-- Malaysia -->
+      <option value="Malaysia">Malaysia</option>
+      <!-- Maldives -->
+      <option value="Maldives">Maldives</option>
+      <!-- Mali -->
+      <option value="Mali">Mali</option>
+      <!-- Malta -->
+      <option value="Malta">Malta</option>
+      <!-- Marshall Islands -->
+      <option value="Marshall Islands">Marshall Islands</option>
+      <!-- Mauritania -->
+      <option value="Mauritania">Mauritania</option>
+      <!-- Mauritius -->
+      <option value="Mauritius">Mauritius</option>
+      <!-- Mexico -->
+      <option value="Mexico">Mexico</option>
+      <!-- Micronesia -->
+      <option value="Micronesia">Micronesia</option>
+      <!-- Moldova -->
+      <option value="Moldova">Moldova</option>
+      <!-- Monaco -->
+      <option value="Monaco">Monaco</option>
+      <!-- Mongolia -->
+      <option value="Mongolia">Mongolia</option>
+      <!-- Montenegro -->
+      <option value="Montenegro">Montenegro</option>
+      <!-- Morocco -->
+      <option value="Morocco">Morocco</option>
+      <!-- Mozambique -->
+      <option value="Mozambique">Mozambique</option>
+    </optgroup>
+    <!-- Countries starting with N -->
+    <optgroup label="N">
+      <!-- Namibia -->
+      <option value="Namibia">Namibia</option>
+      <!-- Nauru -->
+      <option value="Nauru">Nauru</option>
+      <!-- Nepal -->
+      <option value="Nepal">Nepal</option>
+      <!-- Netherlands -->
+      <option value="Netherlands">Netherlands</option>
+      <!-- New Zealand -->
+      <option value="New Zealand">New Zealand</option>
+      <!-- Nicaragua -->
+      <option value="Nicaragua">Nicaragua</option>
+      <!-- Niger -->
+      <option value="Niger">Niger</option>
+      <!-- Nigeria -->
+      <option value="Nigeria">Nigeria</option>
+      <!-- Norway -->
+      <option value="Norway">Norway</option>
+    </optgroup>
+    <!-- Countries starting with O -->
+    <optgroup label="O">
+      <!-- Oman -->
+      <option value="Oman">Oman</option>
+    </optgroup>
+    <!-- Countries starting with P -->
+    <optgroup label="P">
+      <!-- Pakistan -->
+      <option value="Pakistan">Pakistan</option>
+      <!-- Palau -->
+      <option value="Palau">Palau</option>
+      <!-- Palestinian Territories -->
+      <option value="Palestinian Territories">Palestinian Territories</option>
+      <!-- Panama -->
+      <option value="Panama">Panama</option>
+      <!-- Papua New Guinea -->
+      <option value="Papua New Guinea">Papua New Guinea</option>
+      <!-- Paraguay -->
+      <option value="Paraguay">Paraguay</option>
+      <!-- Peru -->
+      <option value="Peru">Peru</option>
+      <!-- Philippines -->
+      <option value="Philippines">Philippines</option>
+      <!-- Poland -->
+      <option value="Poland">Poland</option>
+      <!-- Portugal -->
+      <option value="Palau">Portugal</option>
+    </optgroup>
+    <!-- Countries starting with Q -->
+    <optgroup label="Q">
+      <!-- Qatar -->
+      <option value="Qatar">Qatar</option>
+    </optgroup>
+    <!-- Countries starting with R -->
+    <optgroup label="R">
+      <!-- Romania -->
+      <option value="Romania">Romania</option>
+      <!-- Russia -->
+      <option value="Russia">Russia</option>
+      <!-- Rwanda -->
+      <option value="Rwanda">Rwanda</option>
+    </optgroup>
+    <!-- Countries starting with S -->
+    <optgroup label="S">
+      <!-- Saint Kitts and Nevis -->
+      <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+      <!-- Saint Lucia -->
+      <option value="Saint Lucia">Saint Lucia</option>
+      <!-- Saint Vincent and the Grenadines -->
+      <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+      <!-- Samoa -->
+      <option value="Samoa">Samoa</option>
+      <!-- San Marino -->
+      <option value="San Marino">San Marino</option>
+      <!-- Sao Tome and Principe -->
+      <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+      <!-- Saudi Arabia -->
+      <option value="Saudi Arabia">Saudi Arabia</option>
+      <!-- Senegal -->
+      <option value="Senegal">Senegal</option>
+      <!-- Serbia -->
+      <option value="Serbia">Serbia</option>
+      <!-- Seychelles -->
+      <option value="Seychelles">Seychelles</option>
+      <!-- Sierra Leone -->
+      <option value="Sierra Leone">Sierra Leone</option>
+      <!-- Singapore -->
+      <option value="Singapore">Singapore</option>
+      <!-- Sint Maarten -->
+      <option value="Samoa">Sint Maarten</option>
+      <!-- Slovakia -->
+      <option value="Slovakia">Slovakia</option>
+      <!-- Slovenia -->
+      <option value="Slovenia">Slovenia</option>
+      <!-- Solomon Islands -->
+      <option value="Solomon Islands">Solomon Islands</option>
+      <!-- Somalia -->
+      <option value="Somalia">Somalia</option>
+      <!-- South Africa -->
+      <option value="South Africa">South Africa</option>
+      <!-- South Sudan -->
+      <option value="South Sudan">South Sudan</option>
+      <!-- Spain -->
+      <option value="Spain">Spain</option>
+      <!-- Sri Lanka -->
+      <option value="Sri Lanka">Sri Lanka</option>
+      <!-- Sudan -->
+      <option value="Sudan">Sudan</option>
+      <!-- Suriname -->
+      <option value="Suriname">Suriname</option>
+      <!-- Swaziland -->
+      <option value="Swaziland">Swaziland</option>
+      <!-- Sweden -->
+      <option value="Sweden">Sweden</option>
+      <!-- Switzerland -->
+      <option value="Switzerland">Switzerland</option>
+      <!-- Syria -->
+      <option value="Syria">Switzerland</Syria>
+    </optgroup>
+    <!-- Countries starting with T -->
+    <optgroup label="T">
+      <!-- Taiwan -->
+      <option value="Taiwan">Taiwan</option>
+      <!-- Tajikistan -->
+      <option value="Tajikistan">Tajikistan</option>
+      <!-- Tanzania -->
+      <option value="Jordan">Tanzania</option>
+      <!-- Thailand -->
+      <option value="Thailand">Thailand</option>
+      <!-- Togo -->
+      <option value="Togo">Togo</option>
+      <!-- Tonga -->
+      <option value="Tonga">Tonga</option>
+      <!-- Trinidad and Tobago -->
+      <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+      <!-- Tunisia -->
+      <option value="Tunisia">Tunisia</option>
+      <!-- Turkey -->
+      <option value="Turkey">Turkey</option>
+      <!-- Turkmenistan -->
+      <option value="Turkmenistan">Turkmenistan</option>
+      <!-- Tuvalu -->
+      <option value="Tuvalu">Tuvalu</option>
+    </optgroup>
+    <!-- Countries starting with U -->
+    <optgroup label="U">
+      <!-- Uganda -->
+      <option value="Uganda">Uganda</option>
+      <!-- Ukraine -->
+      <option value="Ukraine">Ukraine</option>
+      <!-- United Arab Emirates -->
+      <option value="United Arab Emirates">United Arab Emirates</option>
+      <!-- United Kingdom -->
+      <option value="United Kingdom">United Kingdom</option>
+      <!-- Uruguay -->
+      <option value="Uruguay">Uruguay</option>
+      <!-- Uzbekistan -->
+      <option value="Uzbekistan">Uzbekistan</option>
+    </optgroup>
+    <!-- Countries starting with V -->
+    <optgroup label="V">
+      <!-- Vanuatu -->
+      <option value="Vanuatu">Vanuatu</option>
+      <!-- Venezuela -->
+      <option value="Venezuela">Venezuela</option>
+      <!-- Vietnam -->
+      <option value="Vietnam">Vietnam</option>
+    </optgroup>
+    <!-- Countries starting with Y -->
+    <optgroup label="Y">
+      <!-- Yemen -->
+      <option value="Yemen">Yemen</option>
+    </optgroup>
+    <!-- Countries starting with Z -->
+    <optgroup label="Z">
+      <!-- Zambia -->
+      <option value="Zambia">Zambia</option>
+      <!-- Zimbabwe -->
+      <option value="Zimbabwe">Zimbabwe</option>
+    </optgroup>
+  </select>
+  </form>
+
+  <p>Click the button to find out if it will snow in the selected location</p>
+
+  <button type="button" onclick="userLocation()">Submit</button>
+  </div>
+  <script src="fallingsnow_v6.js"></script>
+
+<script>
+  function userLocation() {
+      var city = document.getElementById("mySelect").value;
+
+
+    $.getJSON('http://api.apixu.com/v1/forecast.json?key=bdb269e7934e473aa0c233402172212&q=' + city +'&days=1', function(data) {
+        var text = `Weather: ${data.current.condition.text}`
+
+        // Snow States
+        //Patchy & Light Snow
+        if (data.current.condition.text === "Patchy light snow"){
+          $(".display").html('Yes (Patchy and Lightly)');
+        }
+        // Light Snow
+        else if (data.current.condition.text === "Light snow"){
+          $(".display").html('Yes (Lightly)');
+        }
+        // Patchy and Moderate Snow
+        else if (data.current.condition.text === "Patchy moderate snow"){
+          $(".display").html('Yes (Patchy and Moderate)');
+        }
+        // Moderate Snow
+        else if (data.current.condition.text === "Moderate snow"){
+          $(".display").html('Yes (Moderate)');
+        }
+        // Patchy and Heavy Snow
+        else if (data.current.condition.text === "Patchy heavy snow"){
+          $(".display").html('Yes (Patchy and Heavy)');
+        }
+        // Heavy Snow
+        else if (data.current.condition.text === "Heavy snow"){
+          $(".display").html('Yes (Heavy)');
+        }
+        // Light Snow Showers
+        else if (data.current.condition.text === "Light snow showers"){
+          $(".display").html('Yes (Light Snow Shower)');
+        }
+        // Moderate or Heavy Snow Showers
+        else if (data.current.condition.text === "Moderate or heavy snow showers"){
+          $(".display").html('Yes (Moderate or Heavy Snow Showers)');
+        }
+        // Patchy Light Snow with Thunder
+        else if (data.current.condition.text === "Patchy light snow with thunder"){
+          $(".display").html('Yes (Light and Patchy with Thunder)');
+        }
+        // Moderate or Heavy Snow with Thunder
+        else if (data.current.condition.text === "Moderate or heavy snow with thunder"){
+          $(".display").html('Yes (Moderate or Heavy with Thunder)');
+        }
+        // Not Snowing State
+        else{
+          $(".display").html("Nope");
+        }
+
+    });
+  }
+
+  </script>
+
+</body>
+</html>
